@@ -1,0 +1,24 @@
+plugins:
+  bump_on_first_post_edit_enabled:
+    type: bool
+    default: false
+    client: true
+    description:
+      en: "Enable bumping topics when the first post is edited"
+    category: plugins
+
+  bump_allowed_tags:
+    type: list
+    default: "level1|level2|level3"
+    list_type: tag
+    description:
+      en: "Tags that allow topic bumping when first post is edited (separated by |)"
+    category: plugins
+
+  bump_exclude_categories:
+    type: list
+    default: ""
+    list_type: category
+    description:
+      en: "Categories where bump on edit is disabled (separated by |)"
+    category: plugins 

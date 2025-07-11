@@ -1,0 +1,18 @@
+.bump-on-edit-indicator {
+  font-size: 0.875em;
+  color: var(--primary-medium);
+  font-style: italic;
+}
+
+.admin-controls .bump-settings {
+  .setting-label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  .setting-description {
+    color: var(--primary-medium);
+    font-size: 0.875em;
+    margin-bottom: 1em;
+  }
+} 
