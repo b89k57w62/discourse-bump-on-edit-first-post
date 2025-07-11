@@ -16,9 +16,15 @@ PLUGIN_NAME ||= "discourse-bump-on-edit-first-post"
 after_initialize do
   # Event handler for post editing
   DiscourseEvent.on(:post_edited) do |post, topic_changed, options|
+    Rails.logger.info("Post edited event triggered for post #{post&.id}, post_number: #{post&.post_number}")
+    
     next unless post&.topic
+    Rails.logger.info("Post has topic: #{post.topic.id}")
+    
     next unless post.post_number == 1
+    Rails.logger.info("Post is first post, calling BumpService for topic #{post.topic.id}")
 
-    BumpService.bump_topic(post.topic)
+    result = BumpService.bump_topic(post.topic)
+    Rails.logger.info("BumpService result: #{result} for topic #{post.topic.id}")
   end
 end 
