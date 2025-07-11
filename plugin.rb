@@ -3,7 +3,7 @@
 # about: Bumps topics with specific tags when the first post is edited
 # version: 1.0.0
 # authors: Jeffrey
-# url: https://github.com/discourse/discourse-bump-on-edit-first-post
+# url: https://github.com/b89k57w62/discourse-phone-field-bonus
 # required_version: 2.7.0
 # transpile_js: true
 
